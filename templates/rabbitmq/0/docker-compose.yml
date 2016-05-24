@@ -1,0 +1,7 @@
+rabbitmq:
+  image: docker.repo.waimai.sankuai.info:rabbitmq:3
+  ports:
+    - "8080:8080"
+  labels:
+    io.rancher.sidekicks: rabbitmq
+    io.rancher.container.hostname_override: container_name

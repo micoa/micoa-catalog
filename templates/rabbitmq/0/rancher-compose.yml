@@ -1,0 +1,15 @@
+.catalog:
+  name: RabbitMQ
+  version: v3.6.0
+  description: |
+    RabbitMQ Project
+  uuid: rabbitmq-0
+  questions:
+    - variable: "scale"
+      description: "Number of Etcd nodes"
+      label: "Number of Nodes:"
+      required: true
+      default: 1
+      type: "int"
+rabbitmq:
+  scale: "${scale}"

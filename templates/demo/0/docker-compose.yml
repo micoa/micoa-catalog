@@ -1,0 +1,7 @@
+demo:
+  image: docker.repo.waimai.sankuai.info:ubm/demo
+  ports:
+    - "8080:8080"
+  labels:
+    io.rancher.sidekicks: demo
+    io.rancher.container.hostname_override: container_name

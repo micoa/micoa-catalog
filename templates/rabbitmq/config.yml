@@ -1,0 +1,6 @@
+name: RabbitMQ
+description: |
+  RabbitMQ Project
+version: v3.6.0
+category: rabbitmq
+# projectURL: http://git.leeln.com/ubm/demo
