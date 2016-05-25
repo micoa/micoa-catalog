@@ -1,5 +1,5 @@
 rabbitmq:
-  image: docker.repo.waimai.sankuai.info:rabbitmq:3
+  image: docker.repo.waimai.sankuai.info/rabbitmq:3
   ports:
     - "8080:8080"
   labels:
