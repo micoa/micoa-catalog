@@ -13,7 +13,24 @@
       required: true
       default: "git.example.com"
       type: "string"
-
+    - variable: ssh_port
+      description: "ssh port to access gitlab cli"
+      label: "SSH Port"
+      required: true
+      default: "10022" 
+      type: "int"
+    - variable: http_port
+      description: "http port to access gitlab webui"
+      label: "Http Port"
+      required: true
+      default: "10080" 
+      type: "int"
+    - variable: https_port
+      description: "https port to access gitlab webui"
+      label: "Https Port"
+      required: true
+      default: "10443" 
+      type: "int"
 gitlab-server:
   scale: 1
   retain_ip: true
