@@ -35,7 +35,7 @@ gitlab-server:
   scale: 1
   retain_ip: true
   health_check:
-    port: ${http_port}
+    port: 10080
     interval: 30000
     unhealthy_threshold: 3
     strategy: recreate
