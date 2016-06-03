@@ -6,7 +6,7 @@ gitlab-server:
   labels:
     io.rancher.sidekicks: gitlab-data
   hostname: ${gitlab_hostname}
-  image: gitlab/gitlab-ce:8.8.2-ce.0
+  image: docker.repo.waimai.sankuai.info/gitlab/gitlab-ce:8.8.2-ce.0
   volumes_from:
   - gitlab-data
 
@@ -16,7 +16,7 @@ gitlab-data:
   entrypoint:
   - /bin/true
   hostname: gitdata
-  image: gitlab/gitlab-ce:8.8.2-ce.0
+  image: docker.repo.waimai.sankuai.info/gitlab/gitlab-ce:8.8.2-ce.0
   volumes:
   - /etc/gitlab
   - /var/log/gitlab
