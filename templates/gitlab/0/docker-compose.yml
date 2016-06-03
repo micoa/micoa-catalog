@@ -17,6 +17,7 @@ gitlab-data:
   entrypoint:
   - /bin/true
   hostname: gitdata
+  privileged: true
   image: docker.repo.waimai.sankuai.info/gitlab/gitlab-ce:8.8.2-ce.0
   volumes:
   - /etc/gitlab
