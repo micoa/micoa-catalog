@@ -1,0 +1,20 @@
+.catalog:
+  name: "Nginx"
+  version: "v1.11.1-alpine"
+  description: "A Proxy Server"
+  uuid: nginx-0
+  minimum_rancher_version: v0.51.0
+  questions:
+    - variable: http_port
+      description: "http port to access nginx"
+      label: "Http Port"
+      required: true
+      default: "80" 
+      type: "int"
+    - variable: https_port
+      description: "https port to access nginx"
+      label: "https Port"
+      required: true
+      default: "443"
+      type: "int"
+gogs:

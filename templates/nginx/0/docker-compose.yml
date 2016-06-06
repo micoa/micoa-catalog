@@ -1,0 +1,19 @@
+nginx:
+    image: nginx:1.11.1-alpine
+    labels:
+        io.rancher.sidekicks: gitlab-data
+    ports:
+        - ${http_port}:80
+        - ${https_port}:443
+    volumes_from:
+        - nginx-data
+
+nginx-data:
+    image: nginx:1.11.1-alpine
+    labels:
+        io.rancher.container.start_once: 'true'
+    entrypoint:
+        - /bin/true
+    volumes:
+        - /etc/nginx
+        - /usr/share/nginx/html
