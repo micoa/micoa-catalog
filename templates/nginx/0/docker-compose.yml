@@ -1,7 +1,7 @@
 nginx:
     image: nginx:1.11.1-alpine
     labels:
-        io.rancher.sidekicks: gitlab-data
+        io.rancher.sidekicks: nginx-data
     ports:
         - ${http_port}:80
         - ${https_port}:443
