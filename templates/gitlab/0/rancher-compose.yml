@@ -36,9 +36,9 @@ gitlab-server:
   health_check:
     port: ${http_port}
     interval: 30000
-    unhealthy_threshold: 3
-    request_line: '/'
-    response_timeout: 2000
+    unhealthy_threshold: 5
+    request_line: GET / HTTP/1.1
+    response_timeout: 5000
     healthy_threshold: 2
 
 gitlab-data:
