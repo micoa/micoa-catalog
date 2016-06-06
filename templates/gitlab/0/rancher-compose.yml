@@ -33,12 +33,11 @@
       type: "int"
 gitlab-server:
   scale: 1
-  retain_ip: true
   health_check:
     port: ${http_port}
     interval: 30000
     unhealthy_threshold: 3
-    strategy: recreate
+    request_line: '/'
     response_timeout: 2000
     healthy_threshold: 2
 
