@@ -15,7 +15,7 @@
         - gitlab
         - gogs
     - variable: "remote_config"
-      type: "password"
+      type: "string"
       required: true
       label: "Remote Config"
       description: "Must be the full connection string. see http://readme.drone.io/setup/overview/ for more info"
@@ -44,6 +44,11 @@
       label: "Database Service"
       description: "Service to link to for database. For instance if using the default Rancher Galera cluster select galera/galera-lb."
       default: "drone-server"
+    - variable: "plugin_params"
+      type: "string"
+      required: true
+      label: "Plugin Params"
+      description: "This setting may be used to define some global parameters to pass into all plugins on all repositories. see http://readme.drone.io/setup/overview/ for more info"
 drone-lb:
   scale: 1
   load_balancer_config:
