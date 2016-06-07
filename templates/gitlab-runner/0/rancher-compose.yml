@@ -1,0 +1,34 @@
+.catalog:
+  name: Gitlab Runner
+  version: alpine-v1.2.0
+  description: |
+    Gitlab Runner
+  minimum_rancher_version: v0.56.0
+  maintainer: "Javy Liu <liuzhenyuan@meituan.com>"
+  uuid: gitlab-0
+  questions:
+    - variable: "gitlab_hostname"
+      description: "Gitlab hostname"
+      label: "Hostname:"
+      required: true
+      default: "git.example.com"
+      type: "string"
+    - variable: ssh_port
+      description: "ssh port to access gitlab cli"
+      label: "SSH Port"
+      required: true
+      default: "10022" 
+      type: "int"
+    - variable: http_port
+      description: "http port to access gitlab webui"
+      label: "Http Port"
+      required: true
+      default: "10080" 
+      type: "int"
+    - variable: https_port
+      description: "https port to access gitlab webui"
+      label: "Https Port"
+      required: true
+      default: "10443" 
+      type: "int"
+
