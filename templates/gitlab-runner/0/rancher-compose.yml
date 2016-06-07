@@ -7,10 +7,15 @@
   maintainer: "Javy Liu <liuzhenyuan@meituan.com>"
   uuid: gitlab-runner-0
   questions:
-    - variable: "gitlab_hostname"
-      description: "Gitlab hostname"
-      label: "Hostname:"
+    - variable: "gitlab_ci_url"
+      description: "Gitlab CI URL"
+      label: "url:"
       required: true
-      default: "git.example.com"
+      default: "http://git.example.com/ci"
       type: "string"
+    - variable: "gitlab_ci_token"
+      description: "Gitlab CI token"
+      label: "token:"
+      required: true
+      type: "password"
 
