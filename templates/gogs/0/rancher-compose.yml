@@ -1,33 +1,24 @@
 .catalog:
   name: "Gogs"
-  version: "v0.8.43"
+  version: "v0.9.13"
   description: "A painless self-hosted Git service"
   uuid: gogs-0
   minimum_rancher_version: v0.51.0
   questions:
-    - variable: public_port
-      description: "public port to access the mysql server"
-      label: "Public Port"
-      required: true
-      default: "3306"
-      type: "int"
     - variable: http_port
       description: "http port to access gogs webui"
       label: "Http Port"
       required: true
-      default: "10080" 
+      default: "80" 
       type: "int"
     - variable: ssh_port
       description: "ssh port to access gogs cli"
       label: "Ssh Port"
       required: true
-      default: "222"
+      default: "10022"
       type: "int"
-    - variable: mysql_password
-      description: "mysql root password"
-      label: "Mysql Password"
-      required: true
-      default: "password"
-      type: "string"
-
-gogs:
+    - variable: "database_service"
+      type: "service"
+      label: "Database Service"
+      description: "Service to link to for database. For instance if using the default Rancher Galera cluster select galera/galera-lb."
+      default: "drone-server"
