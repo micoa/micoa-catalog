@@ -4,7 +4,6 @@ gitlab-runner:
   image: docker.repo.waimai.sankuai.info/gitlab/gitlab-runner:alpine-v1.2.0
   volumes_from:
   - gitlab-runner-data
-  privileged: true
 
 # gitlab-runner-register:
 #   labels:
@@ -19,7 +18,6 @@ gitlab-runner-data:
   labels:
     io.rancher.container.start_once: 'true'
   net: none
-  privileged: true
   entrypoint:
   - /bin/true
   image: busybox
