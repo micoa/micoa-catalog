@@ -18,9 +18,9 @@
       label: "token:"
       required: true
       type: "password"
-    - variable: "gitlab_ci_description"
-      description: "Gitlab CI description"
-      label: "description:"
+    - variable: "gitlab_ci_name"
+      description: "Gitlab CI Name"
+      label: "name:"
       required: true
       type: "string"
       default: "My Docker Runner"
