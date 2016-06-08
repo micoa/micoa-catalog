@@ -1,6 +1,6 @@
 gitlab-runner:
   labels:
-    io.rancher.sidekicks: gitlab-runner-register
+    io.rancher.sidekicks: gitlab-runner-register,gitlab-runner-data
   image: docker.repo.waimai.sankuai.info/gitlab/gitlab-runner:alpine-v1.2.0
   volumes_from:
   - gitlab-runner-data
@@ -13,7 +13,7 @@ gitlab-runner-register:
   image: docker.repo.waimai.sankuai.info/gitlab/gitlab-runner:alpine-v1.2.0
   volumes_from:
   - gitlab-runner-data
-  command: register -n --url ${gitlab_ci_url} --token ${gitlab_ci_token} --executor docker --description "${gitlab_ci_description}" --docker-image "${gitlab_ci_image}" --docker-privileged
+  command: register -n --url ${gitlab_ci_url} --token ${gitlab_ci_token} --executor docker --description ${gitlab_ci_description} --docker-image ${gitlab_ci_image} --docker-privileged
     
 gitlab-runner-data:
   labels:
