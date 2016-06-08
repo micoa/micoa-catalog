@@ -12,7 +12,7 @@ gitlab-runner-config:
   image: docker.repo.waimai.sankuai.info/gitlab/gitlab-runner:alpine-v1.2.0
   volumes_from:
   - gitlab-runner-data
-  command: register -n -u ${gitlab_ci_url} -r ${gitlab_ci_token} --executor docker --docker-image ${gitlab_ci_image} --docker-privileged --name ${gitlab_ci_name} 
+  command: register -n -u ${gitlab_ci_url} -r ${gitlab_ci_token} --executor docker --docker-image ${gitlab_ci_image} --docker-privileged --name "${gitlab_ci_name}" 
     
 gitlab-runner-data:
   labels:
