@@ -13,7 +13,7 @@ gitlab-runner-config:
   net: 'container:gitlab-runner'
   volumes_from:
   - gitlab-runner-data
-  command: register -n -u ${gitlab_ci_url} -r ${gitlab_ci_token} --executor docker --docker-image ${gitlab_ci_image} --docker-privileged --name "${gitlab_ci_name}" 
+  command: register -n -u ${gitlab_ci_url} -r ${gitlab_ci_token} --executor docker --docker-image ${gitlab_ci_image} --docker-privileged --name "${gitlab_ci_name}" ${gitlab_ci_additon}
     
 gitlab-runner-data:
   labels:
@@ -25,4 +25,5 @@ gitlab-runner-data:
   volumes:
   - /etc/gitlab-runner
   - /var/run/docker.sock:/var/run/docker.sock
+  - /root/.docker:/root/.docker
 
