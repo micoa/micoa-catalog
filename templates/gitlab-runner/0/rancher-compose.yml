@@ -30,4 +30,9 @@
       required: true
       type: "string"
       default: "docker:latest"
+     - variable: "gitlab_ci_additon"
+      description: "Gitlab CI Command line Addtion"
+      label: "Addtion:"
+      type: "string"
+      default: ""
 
