@@ -1,0 +1,8 @@
+gogs:
+    image: gogs/gogs:latest
+    ports:
+        - ${http_port}:3000
+        - ${ssh_port}:22
+    external_links:
+        - ${database_service}:database
+

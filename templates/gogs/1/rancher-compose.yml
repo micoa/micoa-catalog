@@ -1,0 +1,24 @@
+.catalog:
+  name: "Gogs"
+  version: "latest"
+  description: "A painless self-hosted Git service"
+  uuid: gogs-0
+  minimum_rancher_version: v0.51.0
+  questions:
+    - variable: http_port
+      description: "http port to access gogs webui"
+      label: "Http Port"
+      required: true
+      default: "80" 
+      type: "int"
+    - variable: ssh_port
+      description: "ssh port to access gogs cli"
+      label: "Ssh Port"
+      required: true
+      default: "10022"
+      type: "int"
+    - variable: "database_service"
+      type: "service"
+      label: "Database Service"
+      description: "Service to link to for database. For instance if using the default Rancher Galera cluster select galera/galera-lb."
+      default: "drone-server"
