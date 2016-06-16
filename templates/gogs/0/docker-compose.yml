@@ -1,5 +1,5 @@
 gogs:
-    image: gogs/gogs:0.9.13
+    image: docker.repo.waimai.sankuai.info/gogs/gogs:0.9.13
     ports:
         - ${http_port}:3000
         - ${ssh_port}:22
