@@ -1,5 +1,5 @@
 drone-server:
-  image: docker.repo.waimai.sankuai.info/drone/drone:0.5.0
+  image: docker.repo.waimai.sankuai.info/drone/drone:0.4.2
   ports:
     - ${public_port}:8000/tcp
   environment:

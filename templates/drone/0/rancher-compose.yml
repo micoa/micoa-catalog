@@ -1,6 +1,6 @@
 .catalog:
   name: Drone
-  version: 0.5.0
+  version: 0.4.2
   description: |
     Drone CI Server
   questions:
