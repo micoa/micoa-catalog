@@ -1,5 +1,5 @@
 drone-server:
-  image: drone/drone:0.4.2
+  image: docker.repo.waimai.sankuai.info/drone/drone:0.5.0
   ports:
     - ${public_port}:8000/tcp
   environment:
@@ -19,7 +19,7 @@ drone-server:
 
 ## Do not change below. Could cause data loss in upgrade.
 drone-data-volume:
-  image: busybox
+  image: docker.repo.waimai.sankuai.info/busybox
   net: none
   command: /bin/true
   labels:
